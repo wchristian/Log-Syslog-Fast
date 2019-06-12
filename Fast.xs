@@ -1,3 +1,9 @@
+#ifdef __GLIBC__
+#define OFF_T __off64_t
+#else
+#define OFF_T off64_t
+#endif
+
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
